@@ -1,0 +1,14 @@
+version: '3'
+services:
+  words-app:
+    build:
+      context: words-app
+      dockerfile: Dockerfile
+    container_name: words-service
+  gateway-app:
+    build:
+      context: gateway-app
+      dockerfile: Dockerfile
+    container_name: gateway-service
+    ports:
+      - "8080:8080"
